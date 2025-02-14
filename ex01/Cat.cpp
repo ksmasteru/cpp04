@@ -29,7 +29,7 @@ Cat& Cat::operator= (const Cat& rhs)
     return (*this);
 }
 
-void Cat::makeSound()
+void Cat::makesound()
 {
     std::cout << "Meow" << std::endl;
 }

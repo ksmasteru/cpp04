@@ -14,7 +14,7 @@ Dog::~Dog()
     delete _brain;
 }
 
-Dog::Dog(const Dog& rhs) : Animal(rhs)
+Dog::Dog(const Dog& rhs) : AAnimal(rhs)
 {
     std::cout << "Dog copy constructor has been called" << std::endl;
     this->_brain = new Brain(*(rhs._brain));
@@ -25,13 +25,13 @@ Dog& Dog::operator= (const Dog& rhs)
     if (this == &rhs)
         return (*this);
     std::cout << "Dog copy assignement called" << std::endl;
-    Animal::operator=(rhs);
+    AAnimal::operator=(rhs);
     delete _brain;
     this->_brain = new Brain(*(rhs._brain));
     return (*this);
 }
 
-void makeSound()
+void Dog::makesound()
 {
     std::cout << "Wouf Wouf" << std::endl;
 }

@@ -15,4 +15,5 @@ int main()
     dog->makeSound();
     delete animal;
     delete dog;
+
 }

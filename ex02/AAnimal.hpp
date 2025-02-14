@@ -2,15 +2,15 @@
 #include <string>
 #include "Brain.hpp"
 
-class Animal{
+class AAnimal{
     protected: 
         std::string _type;
     public:
-        Animal();
-        Animal(const Animal& rhs);
-        Animal& operator= (const Animal& rhs);
-        virtual ~Animal();
-        virtual void    makeSound() = 0;
+        AAnimal();
+        AAnimal(const AAnimal& rhs);
+        AAnimal& operator= (const AAnimal& rhs);
+        virtual ~AAnimal();
+        virtual void    makesound() = 0;
         // getters
         const std::string& getType() const;
         // setters

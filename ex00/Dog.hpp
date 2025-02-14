@@ -8,5 +8,5 @@ class Dog : public Animal
         ~Dog();
         Dog(const Dog& rhs);
         Dog& operator= (const Dog& rhs);
-        void makesound();
+        void makeSound();
 };

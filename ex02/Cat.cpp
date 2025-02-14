@@ -1,5 +1,6 @@
 #include "Cat.hpp"
 #include <iostream>
+#include "AAnimal.hpp"
 
 Cat::Cat()
 {
@@ -13,7 +14,7 @@ Cat::~Cat()
     std::cout << "Cat decosntructor has been called" << std::endl;
 }
 
-Cat::Cat(const Cat& rhs) : Animal(rhs)
+Cat::Cat(const Cat& rhs) : AAnimal(rhs)
 {
     std::cout << "Cat copy constructor has been called" << std::endl;
     this->_brain = new Brain(*(rhs._brain));// is this a good practice ?
@@ -22,14 +23,14 @@ Cat& Cat::operator= (const Cat& rhs)
 {
     if (this == &rhs)
         return (*this);
-    Animal::operator=(rhs);
+    AAnimal::operator=(rhs);
     // delete current brain;
     delete _brain;
     this->_brain = new Brain(*(rhs._brain));
     return (*this);
 }
 
-void Cat::makeSound()
+void Cat::makesound()
 {
     std::cout << "Meow" << std::endl;
 }

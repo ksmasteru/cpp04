@@ -11,5 +11,5 @@ class Cat : public Animal
         ~Cat();
         Cat(const Cat& rhs);
         Cat& operator= (const Cat& rhs);
-        void makeSound();
+        void makesound();
 };

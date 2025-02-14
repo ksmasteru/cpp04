@@ -1,8 +1,8 @@
 #pragma once
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal
+class Cat : public AAnimal
 {
     private:
         Brain* _brain;
@@ -11,5 +11,5 @@ class Cat : public Animal
         ~Cat();
         Cat(const Cat& rhs);
         Cat& operator= (const Cat& rhs);
-        void makeSound();
+        void makesound();
 };
